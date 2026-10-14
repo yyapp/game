@@ -13,9 +13,9 @@ export interface CaseStudy {
 
 export const cases: CaseStudy[] = [
   {
-    slug: 'anseong-garlic-festival',
-    title: '안성 슈퍼푸드 마늘축제 게임존 운영',
-    location: '경기 안성시',
+    slug: 'uiseong-garlic-festival',
+    title: "의성 슈퍼푸드 마늘축제 '슈퍼푸드 플레이존' 운영",
+    location: '경북 의성군',
     type: '지역 축제',
     year: '2026',
     summary:
