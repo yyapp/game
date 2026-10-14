@@ -32,7 +32,7 @@ export const products: Product[] = [
     specs: [
       { label: '플레이 인원', value: '2인 (1대당)' },
       { label: '구성', value: '캐비닛 + 스툴' },
-      { label: '설치 사례', value: '키즈존 실내 공간' },
+      { label: '설치 사례', value: '만나교회 키즈존' },
     ],
     tags: ['대전', '2인용'],
     accent: 'from-rose-500 to-orange-400',
@@ -104,7 +104,7 @@ export const products: Product[] = [
     specs: [
       { label: '플레이 인원', value: '2인 대전' },
       { label: '스코어', value: '전광판 표시' },
-      { label: '설치 사례', value: '키즈존 실내 공간' },
+      { label: '설치 사례', value: '만나교회 키즈존' },
     ],
     tags: ['대전', '베스트셀러'],
     accent: 'from-emerald-500 to-teal-400',
@@ -119,7 +119,7 @@ export const products: Product[] = [
     specs: [
       { label: '플레이 인원', value: '2인' },
       { label: '구성', value: '본체 + 벤치' },
-      { label: '설치 사례', value: '키즈존 실내 공간' },
+      { label: '설치 사례', value: '만나교회 키즈존' },
     ],
     tags: ['슈팅', '2인용'],
     accent: 'from-lime-500 to-green-400',
@@ -134,7 +134,7 @@ export const products: Product[] = [
     specs: [
       { label: '플레이 인원', value: '4인 동시' },
       { label: '조명', value: 'LED' },
-      { label: '설치 사례', value: '키즈존 실내 공간' },
+      { label: '설치 사례', value: '만나교회 키즈존' },
     ],
     tags: ['4인용', '가족'],
     accent: 'from-amber-400 to-yellow-300',

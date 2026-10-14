@@ -34,12 +34,12 @@ export const cases: CaseStudy[] = [
   },
   {
     slug: 'kidszone-indoor',
-    title: '키즈존 실내 게임존 설치',
-    location: '키즈존 실내 공간',
-    type: '키즈존',
+    title: '만나교회 30주년 기념 키즈존 게임존 설치',
+    location: '만나교회',
+    type: '교회 키즈존',
     year: '2026',
     summary:
-      '대전 아케이드 캐비닛, 에어하키, 좀비 슈팅, 4인 낚시 게임기를 실내 공간에 맞춰 배치·설치했습니다.',
+      '30주년 기념 키즈존에 대전 아케이드 캐비닛, 에어하키, 좀비 슈팅, 4인 낚시 게임기를 실내 공간에 맞춰 배치·설치했습니다.',
     units: '게임기 다수 + 스툴·벤치',
     accent: 'from-sky-500 to-cyan-400',
     images: ['images/cases/kidszone-1.jpg', 'images/cases/kidszone-2.jpg', 'images/products/airhockey-1.jpg', 'images/products/zombie-1.jpg', 'images/products/fishing-1.jpg'],
