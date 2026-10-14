@@ -15,10 +15,10 @@ export function CasesStrip() {
             사례 더 보기
           </AppLink>
         </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {cases.map((c) => (
             <div key={c.slug} className="overflow-hidden rounded-2xl border border-black/5 bg-surface shadow-card">
-              <Thumb accent={c.accent} ratio="video" className="rounded-none" label={c.type} />
+              <Thumb accent={c.accent} src={c.images[0]} alt={c.title} ratio="video" className="rounded-none" label={c.type} />
               <div className="p-4">
                 <p className="text-xs font-semibold text-ink-muted">
                   {c.location} · {c.year}

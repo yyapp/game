@@ -1,8 +1,12 @@
 import { Gamepad2 } from 'lucide-react'
 import { cn } from '../../lib/utils'
+import { asset } from '../../lib/asset'
 
 interface ThumbProps {
   accent: string
+  /** public/ 기준 이미지 경로. 없으면 그라데이션 플레이스홀더 */
+  src?: string
+  alt?: string
   label?: string
   className?: string
   ratio?: 'square' | 'video' | 'portrait'
@@ -18,7 +22,7 @@ const ratios = {
  * Placeholder product visual. Real photos replace this in Lovable
  * by swapping to an <img> element.
  */
-export function Thumb({ accent, label, className, ratio = 'square' }: ThumbProps) {
+export function Thumb({ accent, src, alt = '', label, className, ratio = 'square' }: ThumbProps) {
   return (
     <div
       className={cn(
@@ -28,10 +32,16 @@ export function Thumb({ accent, label, className, ratio = 'square' }: ThumbProps
         className,
       )}
     >
-      <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_30%_20%,white,transparent_45%)]" />
-      <Gamepad2 className="h-10 w-10 opacity-80" strokeWidth={1.5} />
+      {src ? (
+        <img src={asset(src)} alt={alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+      ) : (
+        <>
+          <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_30%_20%,white,transparent_45%)]" />
+          <Gamepad2 className="h-10 w-10 opacity-80" strokeWidth={1.5} />
+        </>
+      )}
       {label && (
-        <span className="absolute bottom-2 left-3 text-xs font-medium tracking-wide opacity-90">
+        <span className="absolute bottom-2 left-3 rounded bg-black/40 px-1.5 py-0.5 text-xs font-medium tracking-wide opacity-90">
           {label}
         </span>
       )}

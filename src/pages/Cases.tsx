@@ -1,7 +1,8 @@
 import { cases } from '../data/cases'
 import { Container } from '../components/ui/Container'
 import { PageHeader } from '../components/ui/PageHeader'
-import { Thumb } from '../components/ui/Thumb'
+import { Gallery } from '../components/ui/Gallery'
+import { asset } from '../lib/asset'
 import { Badge } from '../components/ui/Badge'
 
 export function Cases() {
@@ -9,14 +10,14 @@ export function Cases() {
     <>
       <PageHeader
         title="납품 사례"
-        description="오락실, 키즈카페, 복합 문화공간까지. 규모와 업종을 가리지 않고 시공합니다."
+        description="지역 축제 현장부터 키즈존 실내 공간까지. 장소에 맞춰 설치합니다."
       />
       <Container className="py-14">
         <div className="grid gap-6 md:grid-cols-2">
           {cases.map((c) => (
             <article key={c.slug} className="overflow-hidden rounded-2xl border border-black/5 bg-surface shadow-card">
-              <Thumb accent={c.accent} ratio="video" className="rounded-none" label={c.type} />
-              <div className="p-6">
+              <Gallery images={c.images} alt={c.title} className="p-3" />
+              <div className="p-6 pt-3">
                 <div className="flex items-center gap-2">
                   <Badge>{c.year}</Badge>
                   <span className="text-xs font-semibold text-ink-muted">{c.location}</span>
@@ -24,6 +25,17 @@ export function Cases() {
                 <h2 className="mt-2 text-lg font-bold text-ink">{c.title}</h2>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{c.summary}</p>
                 <p className="mt-4 text-sm font-semibold text-brand">{c.units}</p>
+                {c.video && (
+                  <video
+                    controls
+                    preload="none"
+                    playsInline
+                    poster={asset(c.video.poster)}
+                    className="mt-4 aspect-video w-full rounded-xl bg-black"
+                  >
+                    <source src={asset(c.video.src)} type="video/mp4" />
+                  </video>
+                )}
               </div>
             </article>
           ))}

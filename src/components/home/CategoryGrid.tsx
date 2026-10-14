@@ -30,7 +30,7 @@ export function CategoryGrid() {
               to={`/products?cat=${c.slug}`}
               className="group rounded-2xl border border-black/5 bg-surface p-5 shadow-card transition-colors hover:border-brand/30"
             >
-              <Thumb accent={accents[i % accents.length]} ratio="video" className="rounded-xl" />
+              <Thumb accent={accents[i % accents.length]} src={c.image} alt={c.name} ratio="video" className="rounded-xl" />
               <div className="mt-4 flex items-start justify-between gap-2">
                 <div>
                   <h3 className="font-bold text-ink">{c.name}</h3>

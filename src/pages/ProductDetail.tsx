@@ -1,9 +1,9 @@
 import { ArrowLeft, PhoneCall } from 'lucide-react'
-import { getCategory, getProduct, productsByCategory } from '../data/products'
+import { getProduct, productsByCategory } from '../data/products'
 import { site } from '../data/site'
 import { Container } from '../components/ui/Container'
 import { Badge } from '../components/ui/Badge'
-import { Thumb } from '../components/ui/Thumb'
+import { Gallery } from '../components/ui/Gallery'
 import { ProductCard } from '../components/products/ProductCard'
 import { buttonClasses } from '../components/ui/Button'
 import { AppLink } from '../lib/nav'
@@ -26,7 +26,6 @@ export function ProductDetail({ slug }: ProductDetailProps) {
     )
   }
 
-  const category = getCategory(product.category)
   const related = productsByCategory(product.category).filter((p) => p.slug !== slug)
 
   return (
@@ -36,7 +35,7 @@ export function ProductDetail({ slug }: ProductDetailProps) {
       </AppLink>
 
       <div className="mt-6 grid gap-10 md:grid-cols-2">
-        <Thumb accent={product.accent} ratio="square" label={category?.name} />
+        <Gallery images={product.images} alt={product.name} />
 
         <div>
           <div className="flex flex-wrap gap-1.5">

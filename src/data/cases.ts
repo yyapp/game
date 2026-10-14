@@ -7,47 +7,41 @@ export interface CaseStudy {
   summary: string
   units: string
   accent: string
+  images: string[] // public/ 기준 경로, 첫 번째가 대표 이미지
+  video?: { src: string; poster: string }
 }
 
 export const cases: CaseStudy[] = [
   {
-    slug: 'busan-arcade',
-    title: '부산 서면 대형 오락실 리뉴얼',
-    location: '부산 부산진구',
-    type: '아케이드 전문점',
-    year: '2024',
-    summary: '노후 기기 교체 및 레이아웃 재설계. 격투·리듬 존 분리로 회전율 개선.',
-    units: '게임기 42대',
-    accent: 'from-rose-500 to-orange-400',
-  },
-  {
-    slug: 'ilsan-kids-cafe',
-    title: '일산 키즈카페 게임존 신규 구축',
-    location: '경기 고양시',
-    type: '키즈카페',
-    year: '2024',
-    summary: '연령대별 코인 라이드와 리뎀션 게임 배치, 티켓 상품 코너 세트 구성.',
-    units: '기기 18대 + 상품 코너',
+    slug: 'anseong-garlic-festival',
+    title: '안성 슈퍼푸드 마늘축제 게임존 운영',
+    location: '경기 안성시',
+    type: '지역 축제',
+    year: '2026',
+    summary:
+      '축제 현장 천막 안에 펀치 측정기, 레버형 테스터, LED 테이블 게임기, 챌린지 타워 등 체감형 기기를 배치하고 설치·운영했습니다.',
+    units: '체감형 게임기 다수',
     accent: 'from-lime-500 to-green-400',
+    images: [
+      'images/cases/garlic-1.jpg',
+      'images/cases/garlic-2.jpg',
+      'images/cases/garlic-3.jpg',
+      'images/cases/garlic-4.jpg',
+      'images/cases/garlic-5.jpg',
+      'images/cases/garlic-6.jpg',
+    ],
+    video: { src: 'videos/garlic-festival.mp4', poster: 'images/cases/garlic-video-poster.jpg' },
   },
   {
-    slug: 'gangnam-pc-lounge',
-    title: '강남 복합 라운지 시뮬레이터 존',
-    location: '서울 강남구',
-    type: '복합 문화공간',
-    year: '2023',
-    summary: 'VR 모션 포드와 트윈시트 레이싱 4대 연동 설치, 예약 운영 시스템 연동.',
-    units: '시뮬레이터 9대',
+    slug: 'kidszone-indoor',
+    title: '키즈존 실내 게임존 설치',
+    location: '키즈존 실내 공간',
+    type: '키즈존',
+    year: '2026',
+    summary:
+      '대전 아케이드 캐비닛, 에어하키, 좀비 슈팅, 4인 낚시 게임기를 실내 공간에 맞춰 배치·설치했습니다.',
+    units: '게임기 다수 + 스툴·벤치',
     accent: 'from-sky-500 to-cyan-400',
-  },
-  {
-    slug: 'daejeon-mart',
-    title: '대전 대형마트 코인 라이드 납품',
-    location: '대전 유성구',
-    type: '대형 유통점',
-    year: '2023',
-    summary: '매장 4개 지점 동시 납품 및 정기 유지보수 계약 체결.',
-    units: '라이드 24대',
-    accent: 'from-amber-400 to-yellow-300',
+    images: ['images/cases/kidszone-1.jpg', 'images/cases/kidszone-2.jpg', 'images/products/airhockey-1.jpg', 'images/products/zombie-1.jpg', 'images/products/fishing-1.jpg'],
   },
 ]

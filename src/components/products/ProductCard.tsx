@@ -15,7 +15,7 @@ export function ProductCard({ product }: ProductCardProps) {
       to={`/products/${product.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-black/5 bg-surface shadow-card transition-transform hover:-translate-y-1"
     >
-      <Thumb accent={product.accent} label={category?.name} ratio="video" className="rounded-none" />
+      <Thumb accent={product.accent} src={product.images[0]} alt={product.name} label={category?.name} ratio="video" className="rounded-none" />
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex flex-wrap gap-1.5">
           {product.tags.map((t) => (
