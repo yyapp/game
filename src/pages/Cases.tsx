@@ -31,7 +31,7 @@ export function Cases() {
                     preload="none"
                     playsInline
                     poster={asset(c.video.poster)}
-                    className="mt-4 aspect-video w-full rounded-xl bg-black"
+                    className="mx-auto mt-4 aspect-[9/16] max-h-[70vh] rounded-xl bg-black"
                   >
                     <source src={asset(c.video.src)} type="video/mp4" />
                   </video>
