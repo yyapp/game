@@ -44,4 +44,25 @@ export const cases: CaseStudy[] = [
     accent: 'from-sky-500 to-cyan-400',
     images: ['images/cases/kidszone-1.jpg', 'images/cases/kidszone-2.jpg', 'images/products/airhockey-1.jpg', 'images/products/zombie-1.jpg', 'images/products/fishing-1.jpg'],
   },
+  {
+    slug: 'indoor-event-zone',
+    title: '포토부스·체감형 게임기 실내 행사존 설치',
+    location: '실내 행사장',
+    type: '실내 행사',
+    year: '2026',
+    summary:
+      '인생사진 포토부스와 해머 펀치, 다트, 농구 게임기를 실내 공간에 맞춰 배치·설치했습니다.',
+    units: '포토부스 + 게임기 다수',
+    accent: 'from-violet-500 to-fuchsia-500',
+    images: [
+      'images/cases/indoor-1.jpg',
+      'images/cases/indoor-2.jpg',
+      'images/cases/indoor-3.jpg',
+      'images/cases/indoor-4.jpg',
+      'images/cases/indoor-5.jpg',
+      'images/cases/indoor-6.jpg',
+      'images/cases/indoor-7.jpg',
+    ],
+    video: { src: 'videos/indoor-event.mp4', poster: 'images/cases/indoor-video-poster.jpg' },
+  },
 ]

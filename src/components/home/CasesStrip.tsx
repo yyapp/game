@@ -15,7 +15,7 @@ export function CasesStrip() {
             사례 더 보기
           </AppLink>
         </div>
-        <div className="mt-10 grid gap-5 sm:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {cases.map((c) => (
             <div key={c.slug} className="overflow-hidden rounded-2xl border border-black/5 bg-surface shadow-card">
               <Thumb accent={c.accent} src={c.images[0]} alt={c.title} ratio="video" className="rounded-none" label={c.type} />
