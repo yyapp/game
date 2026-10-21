@@ -1,6 +1,6 @@
 import { Gamepad2 } from 'lucide-react'
 import { cn } from '../../lib/utils'
-import { asset } from '../../lib/asset'
+import { FitImage } from './FitImage'
 
 interface ThumbProps {
   accent: string
@@ -33,7 +33,7 @@ export function Thumb({ accent, src, alt = '', label, className, ratio = 'square
       )}
     >
       {src ? (
-        <img src={asset(src)} alt={alt} loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
+        <FitImage src={src} alt={alt} />
       ) : (
         <>
           <div className="absolute inset-0 opacity-20 [background:radial-gradient(circle_at_30%_20%,white,transparent_45%)]" />

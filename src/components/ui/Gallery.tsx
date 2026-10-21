@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { asset } from '../../lib/asset'
+import { FitImage } from './FitImage'
 import { cn } from '../../lib/utils'
 
 interface GalleryProps {
@@ -15,8 +16,8 @@ export function Gallery({ images, alt, className }: GalleryProps) {
 
   return (
     <div className={className}>
-      <div className="aspect-[4/3] overflow-hidden rounded-xl bg-black/5">
-        <img src={asset(current)} alt={alt} className="h-full w-full object-cover" />
+      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-black/5">
+        <FitImage key={current} src={current} alt={alt} eager />
       </div>
       {images.length > 1 && (
         <div className="mt-3 grid grid-cols-5 gap-2">
