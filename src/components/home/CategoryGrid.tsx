@@ -23,7 +23,7 @@ export function CategoryGrid() {
           title="취급 게임기 카테고리"
           description="매장 콘셉트와 타깃 연령대에 맞춰 최적의 기종을 제안해 드립니다."
         />
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {categories.map((c, i) => (
             <AppLink
               key={c.slug}

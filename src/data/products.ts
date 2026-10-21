@@ -20,6 +20,7 @@ export interface Product {
 export const categories: Category[] = [
   { slug: 'arcade', name: '아케이드 게임기', description: '대전 캐비닛부터 LED 테이블 게임기까지.', image: 'images/products/versus-1.jpg' },
   { slug: 'sports', name: '체감·스포츠 게임기', description: '펀치, 에어하키 등 몸으로 즐기는 인기 기종.', image: 'images/products/punch-2.jpg' },
+  { slug: 'photo', name: '포토부스', description: '행사·공간에 설치하는 인생사진 포토부스.', image: 'images/cases/indoor-6.jpg' },
   { slug: 'kids', name: '가족·키즈 게임기', description: '키즈존과 가족 공간에 맞는 슈팅·낚시 게임.', image: 'images/products/fishing-1.jpg' },
 ]
 
@@ -65,7 +66,7 @@ export const products: Product[] = [
     ],
     tags: ['체감형', '행사용'],
     accent: 'from-red-500 to-orange-500',
-    images: ['images/products/punch-2.jpg', 'images/products/punch-1.jpg', 'images/products/punch-3.jpg'],
+    images: ['images/products/punch-2.jpg', 'images/products/punch-1.jpg', 'images/products/punch-3.jpg', 'images/cases/indoor-4.jpg'],
     featured: true,
   },
   {
@@ -139,6 +140,49 @@ export const products: Product[] = [
     tags: ['4인용', '가족'],
     accent: 'from-amber-400 to-yellow-300',
     images: ['images/products/fishing-1.jpg', 'images/products/fishing-2.jpg'],
+  },
+  {
+    slug: 'photo-booth',
+    name: '인생사진 포토부스',
+    category: 'photo',
+    summary: '컬러풀한 외관의 셀프 포토부스. 행사장·이벤트 공간에서 방문객 참여를 이끕니다.',
+    specs: [
+      { label: '형태', value: '커튼형 셀프 촬영 부스' },
+      { label: '외관', value: '맞춤 랩핑 가능' },
+      { label: '설치 사례', value: '실내 행사장' },
+    ],
+    tags: ['행사용', '맞춤 랩핑'],
+    accent: 'from-pink-500 to-rose-400',
+    images: ['images/cases/indoor-6.jpg', 'images/cases/indoor-5.jpg', 'images/cases/indoor-1.jpg'],
+    featured: true,
+  },
+  {
+    slug: 'electronic-darts',
+    name: '전자 다트 게임기',
+    category: 'sports',
+    summary: '모니터 스코어 표시의 전자 다트 머신. 전용 던지기 매트 포함 구성.',
+    specs: [
+      { label: '방식', value: '전자 다트 (모니터 스코어)' },
+      { label: '구성', value: '본체 + 전용 매트' },
+      { label: '설치 사례', value: '실내 행사장' },
+    ],
+    tags: ['대전', '다인용'],
+    accent: 'from-slate-600 to-red-500',
+    images: ['images/cases/indoor-3.jpg', 'images/cases/indoor-7.jpg'],
+  },
+  {
+    slug: 'basketball-arcade',
+    name: '농구 게임기',
+    category: 'sports',
+    summary: 'LED 스코어 표시의 아케이드 농구 게임기. 남녀노소 누구나 즐기는 체감형 인기 기종.',
+    specs: [
+      { label: '방식', value: '아케이드 농구' },
+      { label: '스코어', value: 'LED 표시' },
+      { label: '설치 사례', value: '실내 행사장' },
+    ],
+    tags: ['체감형', '인기'],
+    accent: 'from-orange-500 to-amber-400',
+    images: ['images/cases/indoor-2.jpg'],
   },
 ]
 
